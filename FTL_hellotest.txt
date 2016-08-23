@@ -1,0 +1,28 @@
+input {
+	file{
+        path =>"hello"
+	type => "csv"
+	start_position => "beginning"
+		}
+}
+filter {
+    
+	India
+	United States
+	Germany
+	France
+      
+    }
+}
+
+output {
+		elasticsearch{
+			action => "index"
+			hosts => "localhost"
+			index => ""
+			workers => string
+		}
+		stdout{
+			codec => rubydebug
+		}
+}
