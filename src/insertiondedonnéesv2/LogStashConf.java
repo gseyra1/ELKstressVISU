@@ -5,25 +5,40 @@
  */
 package insertiondedonnéesv2;
 
+import java.util.Map;
+
 /**
  *
  * @author frus68904
  */
 public class LogStashConf {
-    private String path;
+    private String filePath;
     private String type;
     private String index;
     private int numberOfWorkers;
+    private Map<Integer,Field> fields;
 
-    public LogStashConf(){
+    public LogStashConf() {
         super();
     }
+    
+    
 
-    public LogStashConf(String path, String type, String index) {
-        this.path = path;
+    public LogStashConf(String filePath, String type, String index, int numberOfWorkers, Map<Integer, Field> fields) {
+        this.filePath = filePath;
         this.type = type;
         this.index = index;
+        this.numberOfWorkers = numberOfWorkers;
+        this.fields = fields;
     }
+
+    public Map<Integer, Field> getFields() {
+        return fields;
+    }
+    public void setFields(Map<Integer, Field> fields) {
+        this.fields = fields;
+    }
+ 
     
     public int getNumberOfWorkers() {
         return numberOfWorkers;
@@ -32,11 +47,11 @@ public class LogStashConf {
         this.numberOfWorkers = numberOfWorkers;
     }
     
-    public String getPath() {
-        return path;
+    public String getFilePath() {
+        return filePath;
     }
-    public void setPath(String path) {
-        this.path = path;
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
     }
 
     public String getType() {
