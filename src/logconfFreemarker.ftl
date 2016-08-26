@@ -17,7 +17,7 @@ output {
 			action => "index"
 			hosts => "localhost"
 			index => "${indexCible}"
-			workers => ${numberofworkers}
+			workers => "stoun"
 		}
 		stdout{
 			codec => rubydebug

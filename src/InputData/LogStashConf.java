@@ -3,20 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package insertiondedonnéesv2;
+package InputData;
 
 import java.util.Map;
+import freemarker.template.Configuration;
 
 /**
  *
  * @author frus68904
  */
-public class LogStashConf {
+public class LogStashConf extends Configuration{
     private String filePath;
     private String type;
     private String index;
     private int numberOfWorkers;
-    private Map<Integer,Field> fields;
+    Map<Integer,Field> fields;
 
     public LogStashConf() {
         super();
